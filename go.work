@@ -2,8 +2,8 @@ go 1.18
 
 use (
 	./db
-	./example/hello
 	./hello
 	./hello2
 	./linq
+	./rest
 )
