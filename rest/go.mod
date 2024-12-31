@@ -2,10 +2,7 @@ module rest
 
 go 1.18
 
-require (
-	github.com/ahmetalpbalkan/go-linq v3.0.0+incompatible
-	github.com/gin-gonic/gin v1.10.0
-)
+require github.com/gin-gonic/gin v1.10.0
 
 require (
 	github.com/bytedance/sonic v1.11.6 // indirect

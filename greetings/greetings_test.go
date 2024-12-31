@@ -1,7 +1,9 @@
 package greetings
 
 import (
+	"fmt"
 	"regexp"
+	"strings"
 	"testing"
 )
 
@@ -21,4 +23,33 @@ func TestHelloEmpty(t *testing.T) {
 	if msg != "" || err == nil {
 		t.Fatalf(`Hello("") = %q, %v, want "", error`, msg, err)
 	}
+}
+
+func TestStrings01(t *testing.T) {
+	for _, s := range strings.Fields("a b c") {
+		fmt.Println(s)
+	}
+	a, b := 0, 1
+	println(a, b)
+	type CustomType float64
+
+	f := 1.0
+	c := CustomType(f)
+
+	println(c)
+
+	type Person struct {
+		Name string
+		Age  int
+	}
+
+	type Employee struct {
+		Name string
+		Role string
+	}
+
+	p := Person{"John", 30}
+
+	println(p.Name, p.Age)
+
 }
