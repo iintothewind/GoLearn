@@ -118,3 +118,21 @@ func TestListAlbums02(t *testing.T) {
 
 	fmt.Printf("Albums found: %v\n", result)
 }
+
+func TestTextTemplate01(t *testing.T) {
+	// tmpl, err := template.New("test").Parse(`{{define "T"}}Hello, {{.}}!{{end}}`)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// err = tmpl.ExecuteTemplate(os.Stdout, "T", "<script>alert('you have been pwned')</script>")
+
+	// err = tmpl.Execute(log.Writer(), struct{ Name string }{"Alice"})
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	s := fmt.Sprintf("Hello, %v!", "Alice")
+
+	fmt.Println(s)
+}
